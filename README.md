@@ -16,6 +16,19 @@ AutoLauncher.exe --help             Show this help
 
 After `--register`, run just `autolauncher` from any terminal.
 
+## Install
+
+Two options available on the [Releases](https://github.com/herm1t0/AutoLauncher/releases) page:
+
+**Portable** (`AutoLauncher.exe`)
+- Download, place anywhere, run `AutoLauncher.exe --register`
+- Uninstall: `AutoLauncher.exe --unregister --all`
+
+**Installer** (`AutoLauncher.msi`)
+- Installs to `Program Files`, adds to system PATH automatically
+- Optional autostart with Windows
+- Uninstall via Windows Settings
+
 ## Configuration
 
 Config file: `%APPDATA%\AutoLauncher\autolauncher.json`
