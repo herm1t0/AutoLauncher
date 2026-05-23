@@ -28,7 +28,7 @@
                        Guid="e15e2ded-f009-4fd1-b623-f0ce74189e8b">
                 <File Id="AutoLauncherExe"
                       Name="AutoLauncher.exe"
-                      Source="..\AutoLauncher\bin\Release\net10.0\win-x64\publish\AutoLauncher.exe"
+                      Source="..\AutoLauncher\bin\Release\net10.0-windows\win-x64\publish\AutoLauncher.exe"
                       KeyPath="yes"/>
             </Component>
 
