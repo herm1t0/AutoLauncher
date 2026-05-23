@@ -1,0 +1,18 @@
+## .NET build artifacts
+bin/
+obj/
+publish/
+
+## Rider IDE
+.idea/
+
+## Visual Studio
+.vs/
+
+## User-specific files
+*.user
+*.DotSettings.user
+
+## OS junk
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,76 @@
+﻿<Application x:Class="AutoLauncher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+
+        <!-- Catppuccin Mocha (dark) - "mocha" theme -->
+        <Color x:Key="MochaBase">#1e1e2e</Color>
+        <Color x:Key="MochaSurface0">#313244</Color>
+        <Color x:Key="MochaSurface1">#45475a</Color>
+        <Color x:Key="MochaOverlay0">#6c7086</Color>
+        <Color x:Key="MochaSubtext0">#a6adc8</Color>
+        <Color x:Key="MochaSubtext1">#bac2de</Color>
+        <Color x:Key="MochaText">#cdd6f4</Color>
+        <Color x:Key="MochaPink">#f5c2e7</Color>
+        <Color x:Key="MochaMauve">#cba6f7</Color>
+        <Color x:Key="MochaRed">#f38ba8</Color>
+        <Color x:Key="MochaGreen">#a6e3a1</Color>
+        <Color x:Key="MochaBlue">#89b4fa</Color>
+
+        <!-- Catppuccin Latte (light) - "latte" theme -->
+        <Color x:Key="LatteBase">#eff1f5</Color>
+        <Color x:Key="LatteSurface0">#ccd0da</Color>
+        <Color x:Key="LatteSurface1">#bcc0cc</Color>
+        <Color x:Key="LatteOverlay0">#9ca0b0</Color>
+        <Color x:Key="LatteSubtext0">#6c6f85</Color>
+        <Color x:Key="LatteSubtext1">#5c5f77</Color>
+        <Color x:Key="LatteText">#4c4f69</Color>
+        <Color x:Key="LattePink">#ea76cb</Color>
+        <Color x:Key="LatteMauve">#8839ef</Color>
+        <Color x:Key="LatteRed">#d20f39</Color>
+        <Color x:Key="LatteGreen">#40a02b</Color>
+        <Color x:Key="LatteBlue">#1e66f5</Color>
+
+        <!-- Windows Dark (classic dark) - "dark" theme -->
+        <Color x:Key="WinDarkBase">#1E1E1E</Color>
+        <Color x:Key="WinDarkSurface0">#2D2D2D</Color>
+        <Color x:Key="WinDarkSurface1">#3C3C3C</Color>
+        <Color x:Key="WinDarkOverlay0">#5A5A5A</Color>
+        <Color x:Key="WinDarkSubtext0">#9A9A9A</Color>
+        <Color x:Key="WinDarkSubtext1">#B0B0B0</Color>
+        <Color x:Key="WinDarkText">#F0F0F0</Color>
+        <Color x:Key="WinDarkPink">#CF93D9</Color>
+        <Color x:Key="WinDarkMauve">#BB86FC</Color>
+        <Color x:Key="WinDarkRed">#F44336</Color>
+        <Color x:Key="WinDarkGreen">#4CAF50</Color>
+        <Color x:Key="WinDarkBlue">#2196F3</Color>
+
+        <!-- Windows Light (classic light) - "light" theme -->
+        <Color x:Key="WinLightBase">#F0F0F0</Color>
+        <Color x:Key="WinLightSurface0">#FFFFFF</Color>
+        <Color x:Key="WinLightSurface1">#E8E8E8</Color>
+        <Color x:Key="WinLightOverlay0">#C0C0C0</Color>
+        <Color x:Key="WinLightSubtext0">#707070</Color>
+        <Color x:Key="WinLightSubtext1">#585858</Color>
+        <Color x:Key="WinLightText">#1E1E1E</Color>
+        <Color x:Key="WinLightPink">#C2185B</Color>
+        <Color x:Key="WinLightMauve">#6A1B9A</Color>
+        <Color x:Key="WinLightRed">#D32F2F</Color>
+        <Color x:Key="WinLightGreen">#388E3C</Color>
+        <Color x:Key="WinLightBlue">#1976D2</Color>
+
+        <!-- Active brushes (initially WinDark, "system" default) -->
+        <SolidColorBrush x:Key="Base" Color="#1E1E1E" />
+        <SolidColorBrush x:Key="Surface0" Color="#2D2D2D" />
+        <SolidColorBrush x:Key="Surface1" Color="#3C3C3C" />
+        <SolidColorBrush x:Key="Overlay0" Color="#5A5A5A" />
+        <SolidColorBrush x:Key="Subtext0" Color="#9A9A9A" />
+        <SolidColorBrush x:Key="Subtext1" Color="#B0B0B0" />
+        <SolidColorBrush x:Key="Text" Color="#F0F0F0" />
+        <SolidColorBrush x:Key="Pink" Color="#CF93D9" />
+        <SolidColorBrush x:Key="Mauve" Color="#BB86FC" />
+        <SolidColorBrush x:Key="Red" Color="#F44336" />
+        <SolidColorBrush x:Key="Green" Color="#4CAF50" />
+        <SolidColorBrush x:Key="Blue" Color="#2196F3" />
+    </Application.Resources>
+</Application>

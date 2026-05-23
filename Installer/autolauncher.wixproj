@@ -1,0 +1,13 @@
+<Project Sdk="WixToolset.Sdk/7.0.0">
+  <PropertyGroup>
+    <AcceptEula>wix7</AcceptEula>
+    <Platform>x64</Platform>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="autolauncher.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.UI.wixext" Version="7.0.0" />
+  </ItemGroup>
+</Project>

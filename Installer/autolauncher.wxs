@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+     xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+
+    <Package Name="AutoLauncher"
+             Manufacturer="herm1t"
+             Version="1.0.0"
+             UpgradeCode="b82f2a0b-ac67-4044-950a-69c73cb79aa8"
+             Scope="perMachine">
+
+        <ui:WixUI Id="WixUI_FeatureTree"/>
+
+        <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+
+        <MajorUpgrade DowngradeErrorMessage="A newer version is already installed."/>
+
+        <Media Id="1" Cabinet="AutoLauncher.cab" EmbedCab="yes"/>
+
+        <StandardDirectory Id="ProgramFiles64Folder">
+            <Directory Id="INSTALLFOLDER" Name="AutoLauncher"/>
+        </StandardDirectory>
+
+        <Feature Id="Main" Title="AutoLauncher" Level="1"
+                 ConfigurableDirectory="INSTALLFOLDER"
+                 AllowAdvertise="no" AllowAbsent="no">
+
+            <Component Id="MainExe" Directory="INSTALLFOLDER"
+                       Guid="e15e2ded-f009-4fd1-b623-f0ce74189e8b">
+                <File Id="AutoLauncherExe"
+                      Name="AutoLauncher.exe"
+                      Source="..\AutoLauncher\bin\Release\net10.0\win-x64\publish\AutoLauncher.exe"
+                      KeyPath="yes"/>
+            </Component>
+
+            <Component Id="EnvPath" Directory="INSTALLFOLDER"
+                       Guid="34a6eafd-775b-4105-b2eb-d439e0303b9d">
+                <Environment Id="PathEnv"
+                             Name="PATH"
+                             Action="set"
+                             Part="last"
+                             System="yes"
+                             Value="[INSTALLFOLDER]"/>
+            </Component>
+        </Feature>
+
+        <Feature Id="AutoStart" Title="AutoStart" Level="1"
+                 Description="Launch AutoLauncher at Windows startup">
+            <Component Id="AutoStartReg" Directory="INSTALLFOLDER"
+                       Guid="883a293e-5d42-42d0-8ef9-01103926b346">
+                <RegistryValue Id="RunKey"
+                               Root="HKLM"
+                               Key="Software\Microsoft\Windows\CurrentVersion\Run"
+                               Name="AutoLauncher"
+                               Value="&quot;[INSTALLFOLDER]AutoLauncher.exe&quot;"
+                               Type="string"
+                               KeyPath="yes"/>
+            </Component>
+        </Feature>
+    </Package>
+</Wix>
