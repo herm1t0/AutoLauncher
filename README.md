@@ -1,6 +1,7 @@
 # AutoLauncher
 
-Sequential application launcher with a WPF GUI. Launches a list of programs one by one, waiting for each process to exit before starting the next.
+A sequential application launcher with WPF GUI. Launches a list of programs one by one,
+waiting for each process to exit before starting the next.
 
 ## Usage
 
@@ -10,17 +11,18 @@ AutoLauncher.exe --register         Add current directory to user PATH
 AutoLauncher.exe --unregister       Remove current directory from user PATH
 AutoLauncher.exe --unregister --all Remove ALL AutoLauncher.exe entries from PATH
 AutoLauncher.exe --config           Open config file in default editor
-AutoLauncher.exe --help             Show help
+AutoLauncher.exe --help             Show this help
 ```
 
 After `--register`, run just `autolauncher` from any terminal.
 
 ## Configuration
 
-Edit `%APPDATA%\AutoLauncher\autolauncher.json`, or set `AUTOLAUNCHER_CONFIG_HOME` to override
-the config directory.
+Config file: `%APPDATA%\AutoLauncher\autolauncher.json`
 
-Example config:
+Override the directory with `AUTOLAUNCHER_CONFIG_HOME` environment variable.
+
+Example:
 
 ```json
 {
