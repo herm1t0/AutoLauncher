@@ -1,7 +1,7 @@
 # AutoLauncher
 
-A sequential application launcher with WPF GUI. Launches a list of programs one by one,
-waiting for each process to exit before starting the next.
+A sequential application launcher with WPF GUI. Launches a list of programs one by one.
+Optionally waits for each process to exit before starting the next (see `wait` field).
 
 ## Usage
 
@@ -52,8 +52,8 @@ Override the directory with `AUTOLAUNCHER_CONFIG_HOME` environment variable.
 | `arguments`  | string  | `null`  | No       | Command-line arguments passed to the executable |
 | `admin`      | bool    | `false` | No       | Launch as administrator |
 | `wait`       | bool    | `false` | No       | Wait for the process to exit before starting the next app |
-| `delayMs`    | int     | `1000`  | No       | Additional delay after launch, in milliseconds |
-| `icon`       | string  | `null`  | No       | Path to a custom icon (`.exe`, `.ico`, `.dll`). If not set, extracted from the executable |
+| `delayMs`    | int     | `1000`  | No       | Additional delay after the process exits, in milliseconds. Only applied when `wait` is `true`. If not set or 0, defaults to 2000 ms |
+| `icon`       | string  | `null`  | No       | Path to a custom icon (`.exe`, `.ico`, `.dll`), or `"auto"` to extract from the app's own executable. If `null`, no icon is displayed |
 
 ### Example
 
@@ -69,20 +69,31 @@ Override the directory with `AUTOLAUNCHER_CONFIG_HOME` environment variable.
       "admin": false,
       "wait": false,
       "delayMs": 1000,
-      "icon": null
+      "icon": "auto"
     },
     {
       "name": "Terminal",
       "path": "C:\\Program Files\\Windows Terminal\\wt.exe",
       "arguments": "-d C:\\projects",
       "admin": false,
-      "wait": false,
+      "wait": true,
       "delayMs": 500,
       "icon": null
     }
   ]
 }
 ```
+
+## Logs
+
+Errors and diagnostic messages are written to `autolauncher.log` in the same directory as the config file:
+`%APPDATA%\AutoLauncher\autolauncher.log`
+
+## Keyboard
+
+| Key     | Action          |
+|---------|-----------------|
+| `Esc`   | Close the window (cancels in-progress launches) |
 
 ## Build
 
