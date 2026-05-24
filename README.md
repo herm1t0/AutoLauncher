@@ -35,17 +35,50 @@ Config file: `%APPDATA%\AutoLauncher\autolauncher.json`
 
 Override the directory with `AUTOLAUNCHER_CONFIG_HOME` environment variable.
 
-Example:
+### Root fields
+
+| Key      | Type   | Default    | Description |
+|----------|--------|------------|-------------|
+| `theme`  | string | `"system"` | UI theme. Values: `"dark"`, `"light"`, `"system"` (follows Windows), `"mocha"` (Catppuccin Mocha), `"latte"` (Catppuccin Latte) |
+| `topmost`| bool   | `true`     | Keep window always on top of others |
+| `apps`   | array  | `[]`       | List of applications to launch |
+
+### App entry fields (elements of `apps`)
+
+| Key          | Type    | Default | Required | Description |
+|--------------|---------|---------|----------|-------------|
+| `name`       | string  | `""`    | Yes      | Display name shown in the UI |
+| `path`       | string  | `""`    | Yes      | Path to the executable |
+| `arguments`  | string  | `null`  | No       | Command-line arguments passed to the executable |
+| `admin`      | bool    | `false` | No       | Launch as administrator |
+| `wait`       | bool    | `false` | No       | Wait for the process to exit before starting the next app |
+| `delayMs`    | int     | `1000`  | No       | Additional delay after launch, in milliseconds |
+| `icon`       | string  | `null`  | No       | Path to a custom icon (`.exe`, `.ico`, `.dll`). If not set, extracted from the executable |
+
+### Example
 
 ```json
 {
+  "theme": "system",
+  "topmost": true,
   "apps": [
     {
       "name": "Browser",
       "path": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-      "args": "",
-      "enabled": true,
-      "timeoutSeconds": 30
+      "arguments": "--private-window",
+      "admin": false,
+      "wait": false,
+      "delayMs": 1000,
+      "icon": null
+    },
+    {
+      "name": "Terminal",
+      "path": "C:\\Program Files\\Windows Terminal\\wt.exe",
+      "arguments": "-d C:\\projects",
+      "admin": false,
+      "wait": false,
+      "delayMs": 500,
+      "icon": null
     }
   ]
 }
