@@ -1,3 +1,5 @@
+<video src="https://github-production-user-asset-6210df.s3.amazonaws.com/114952565/600412769-4e18ad04-7867-472b-99ab-23bdf4a7893b.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260530%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260530T092854Z&X-Amz-Expires=300&X-Amz-Signature=96d63f9cd598752955aa3183a19e624a0d79fe3505000349b41b006c42b1eeb3&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4" controls></video>
+
 # AutoLauncher
 
 A sequential application launcher with WPF GUI. Launches a list of programs one by one.
